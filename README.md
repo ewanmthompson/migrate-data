@@ -1,14 +1,15 @@
-# blog-api
+# migrate-data
 
 This is the Module 3 assignment lab for the edX Introduction to NodeJS course.
 
-This project merge data from two sources to a MongoDB database.
+This project merges data from two sources to a MongoDB database.
 
 # Usage
 
 $ npm i
 
 $ node migrate-data.js nnnn
+
 where nnnn is an integer specfying the parallel batch size, if omitted nnnn defaults to 100
 
 # Design
@@ -28,6 +29,6 @@ Only real challenge was getting the sytax correct when building the task list in
 
 To test, I simply ran the program and resolved any processing errors until I got a clean run. I used the intregrated debugger in Visual Studio Code to step through the code to diagnose any problems.
 
-Once I got a clean run I checked that the record count was correct. I checked then a sample of records from the beginning, middle and end of the customer datasets to ensure records looked correct and data was merged correctly and was in alignment.
+Once I got a clean run I checked that the record count was correct using MongoDB Compass. I then checked a sample of records from the beginning, middle and end of the customer datasets to ensure records looked correct and data was merged correctly and was in alignment.
 
 I then ran a number of tests to check the optimum level of parallelism. On my machine, 150 records per batch is a sweet spot.
